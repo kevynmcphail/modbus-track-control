@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+  <head>
+      <title></title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <script src="/js/jquery-3.2.1.min.js"></script>
+      <link rel="shortcut icon" href="favicon.ico">
+      <link rel="stylesheet" type="text/css" href="/bootstrap/css/bootstrap.css">
+  </head>
+
+<body>
+  <div class="container" style="width: 100%">
+    <div id="left-col" class="container" style="width: 50%; float: left;">
+
+      <div id="write-register">
+          <h2>Write Register</h2>
+          <div class =  "col-sm-4">
+            <input id="wr-register" type="text" class="form-control" placeholder="Register">
+          </div>
+          <div class =  "col-sm-8" >
+            <input id="wr-data" type="text" class="form-control" placeholder="Data">
+          </div>
+          <div class =  "col-sm-12" style="padding-top: 10px; padding-bottom: 25px">
+            <button class="b0 btn btn-primary" style="width: 100%; ">Send</button>
+          </div>
+      </div>
+
+      <div id="read-register" >
+          <h2 >Read Register</h2>
+          <div class =  "col-sm-4">
+            <input id="rr-register" type="text" class="form-control" placeholder="Register">
+          </div>
+          <div class =  "col-sm-8" >
+            <input id="rr-data" type="text" class="form-control" placeholder="Data">
+          </div>
+          <div class =  "col-sm-12" style="padding-top: 10px;">
+            <button class="b0 btn btn-primary" style="width: 100%; ">Send</button>
+          </div>
+      </div>
+
+      <!-- <div id="velocity" >
+
+        <h2>Velocity</h2>
+        <div class =  "col-sm-12" >
+          <input id="vel-vel" type="text" class="form-control" placeholder="Velocity">
+        </div>
+        <div class =  "col-sm-12" style="width: 100%; padding-top: 10px;">
+          <input id="vel-acc" type="text" class="form-control" placeholder="Acceleration">
+        </div>
+        <div class =  "col-sm-12" style="width: 100%; padding-top: 10px;">
+          <input id="vel-dec" type="text" class="form-control" placeholder="Deceleration">
+        </div>
+        <div class =  "col-sm-9" style="padding-top: 10px;">
+          <button class="b5 btn btn-success" style="width: 100%; ">Go</button>
+        </div>
+        <div class =  "col-sm-3" style="padding-top: 10px; padding-bottom: 10px;">
+          <button class="b6 btn btn-danger" style="width: 100%; ">STOP</button>
+        </div>
+
+      </div>
+
+      <div id="position">
+
+        <h2>Position</h2>
+        <div class =  "col-sm-12" >
+          <input id="pos-pos" type="text" class="form-control" placeholder="Position">
+        </div>
+        <div class =  "col-sm-12" style="width: 100%; padding-top: 10px;">
+          <input id="pos-vel" type="text" class="form-control" placeholder="Velocity">
+        </div>
+        <div class =  "col-sm-12" style="width: 100%; padding-top: 10px;">
+          <input id="pos-acc" type="text" class="form-control" placeholder="Acceleration">
+        </div>
+        <div class =  "col-sm-12" style="width: 100%; padding-top: 10px;">
+          <input id="pos-dec" type="text" class="form-control" placeholder="Deceleration">
+        </div>
+        <div class =  "col-sm-4" style="padding-top: 10px;">
+          <button class="b7 btn btn-success" style="width: 100%; ">Relative Move</button>
+        </div>
+        <div class =  "col-sm-4" style="padding-top: 10px;">
+          <button class="b8 btn btn-warning" style="width: 100%; ">Absolute Move</button>
+        </div>
+        <div class =  "col-sm-4" style="padding-top: 10px; padding-bottom: 10px;">
+          <button class="b9 btn btn-danger" style="width: 100%; ">STOP</button>
+        </div>
+
+      </div>
+
+      <div id="jog" >
+
+        <h2 >Jog</h2>
+        <div class =  "col-sm-12" style="width: 100%;">
+          <input id="jog-vel" type="text" class="form-control" placeholder="Velocity">
+        </div>
+        <div class =  "col-sm-12" style="width: 100%; padding-top: 10px;">
+          <input id="jog-acc" type="text" class="form-control" placeholder="Acceleration">
+        </div>
+        <div class =  "col-sm-12" style="width: 100%; padding-top: 10px;">
+          <input id="jog-dec" type="text" class="form-control" placeholder="Deceleration">
+        </div>
+        <div class =  "col-sm-6" style="padding-top: 10px;">
+          <button class="b10 btn btn-success" style="width: 100%; ">Clockwise</button>
+        </div>
+        <div class =  "col-sm-6" style="padding-top: 10px; padding-bottom: 10px;">
+          <button class="b11 btn btn-warning" style="width: 100%; ">Counter Clockwise</button>
+        </div>
+
+      </div> -->
+    </div>
+  </div>
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="/main.js"></script>
+
+
+
+
+
+  <!-- <script type="text/javascript">
+
+
+
+  </script> -->
+
+</body>
+</html>
+<!-- <script src="http://localhost:8196/socket.io/socket.io.js"></script><script>var socket = io.connect("http://localhost:8196");socket.on("reload", function(){window.location.reload()});</script> -->
