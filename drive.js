@@ -25,7 +25,7 @@ var Drive = function() {
 	_this.response = "";
 	//_this.jogging = false;
 
-	this.initialize = function(number, _port, _baudRate){
+	this.initialize = function(_port, _baudRate){
 		_this.serial = new SerialPort(_port, {
 			baudRate: _baudRate,
 			dataBits: 8,
@@ -36,14 +36,14 @@ var Drive = function() {
 			//parser: SerialPort.parsers.ByteLength(10),
 			disconnectedCallback: function(e) {
 				_this.open = false;
-				logger.error('=== DRIVE ' + number.toString() + ' ==', 'Serial port: '+ port +' disconnected');
+				logger.error('=== DRIVE ===', 'Serial port: '+ port +' disconnected');
 				_this.emit('disconnected');
 			}
 		});
 
 		_this.serial.on('open', function() {
 			_this.open = true;
-			logger.info('== DRIVE ' + number.toString() + ' ==', 'Serial Port Opened');
+			logger.info('=== DRIVE ===', 'Serial Port Opened');
 			_this.emit("open");
 		});
 
@@ -86,7 +86,7 @@ var Drive = function() {
 	}
 
 	this.write = function(data, cb) {
-		//console.log("Sending: " + data.toString())
+		logger.info('=== DRIVE ===', 'Sending: ' + data);
 		_this.serial.write(data);
 		if (cb != null) {
 			cb();
